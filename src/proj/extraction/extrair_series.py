@@ -3,7 +3,7 @@ import pandas as pd
 import httpx
 
 
-def extrair_e_consolidar_macro(dict_series, start="2018-01-01"):
+def extrair_e_consolidar_macro(dict_series, start="2021-01-01", end=""):
     list_dfs = []
 
     for nome, codigo in dict_series.items():
@@ -30,6 +30,9 @@ if __name__ == "__main__":
         "ipca": 433,
         "inadimplencia_pf": 21084,
         "juros_cartao": 20786,
+        "massa_rendimento": 28763,
+        "desemprego": 24369,
+        "indice_confianca_consumidor": 4393,
     }
     df_consolidado = extrair_e_consolidar_macro(dict_series)
     print("processo concluído")
